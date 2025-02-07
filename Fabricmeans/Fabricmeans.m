@@ -1,8 +1,8 @@
 
-function [Y, minO, iter_num, sse, obj, balance_loss, elapsed_time] = BABCDKM(X, label,c, block_size, rho, numWorkers, max_iters)
+function [Y, minO, iter_num, sse, obj, balance_loss, elapsed_time] = Fabricmeans(X, label,c, block_size, rho, max_iters)
 
 
-fprintf("BABCDKM\n");
+fprintf("Fabricmeans\n");
 [~,n] = size(X);
 run_time = tic;
 
@@ -16,7 +16,6 @@ FF=sum(F,1);    % diag(F'*F) ;
 FXXF=XF'*XF;    % F'*X'*X*F;
 
 blocks = partitionNumbers(n,block_size);
-par_time_t = zeros(max_iters, length(blocks));
 
 b = (n/c) * 0.001;
 alpha = n/(c) - b;
@@ -102,13 +101,8 @@ end
 minO=obj(iter_num);
 Y=label;
 elapsed_time = toc(run_time);
-% row_max_time = max(par_time_t, [], 2);  % max(matrix, [], 2) 
-% sum_of_max_time = sum(row_max_time);
-% total_sum = sum(sum(par_time_t));
-% elapsed_time = elapsed_time - total_sum + sum_of_max_time;
 
 disp(['Elapsed time: ', num2str(elapsed_time), ' seconds']);
-% delete(gcp('nocreate'))
 
 cluster_size = zeros(1, c);
 for ii = 1:c

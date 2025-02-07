@@ -1,9 +1,8 @@
 
-function [Y, minO, iter_num, sse, obj, balance_loss, elapsed_time] = BABCDKM_DP(X, label,c, block_size, t, numWorkers, max_iters,epsilon)
+function [Y, minO, iter_num, sse, obj, balance_loss, elapsed_time] = Fabricmeans_DP(X, label,c, block_size, t, max_iters,epsilon)
 
 
-fprintf("BABCDKM-DP\n");
-% parpool("local",numWorkers);
+fprintf("Fabricmeans-DP\n");
 clip_param = 0.02;
 delta_dp = 0.001;
 % epsilon = epsilon;
@@ -21,7 +20,6 @@ for ii=1:c
         d2c = sum(Xi.^2) + c2 - 2*ceni'*Xi;
         sumd(ii,1) = sum(d2c); 
 end
-% rho = sum(sumd) /(t*(n / c));
 rho = t;
 run_time = tic;
 

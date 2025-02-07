@@ -60,7 +60,6 @@ for iter =1:iter_rounds
     end
  end 
     iter_num = iter_num+1;
-    %% compute objective function value
     for ii=1:c
         idxi = find(label==ii);
         Xi = X(:,idxi);
@@ -70,7 +69,7 @@ for iter =1:iter_rounds
         d2c = sum(Xi.^2) + c2 - 2*ceni'*Xi;
         sumd(ii,1) = sum(d2c);
     end
-    obj(iter_num) = sum(sumd);     %  objective function value
+    obj(iter_num) = sum(sumd);     
 end
 elapsed_time = toc(run_time);
 
