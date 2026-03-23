@@ -12,6 +12,7 @@ In addition to the core algorithms, this repository includes several comparative
 - **FCE**
 - **VFLC**
 - **DPFMPS**
+- **Teb**
 
 Each of these algorithms is implemented for experimentation and comparison in federated clustering contexts. 
 
@@ -61,8 +62,6 @@ To run any of the methods, simply execute the `run.m` script. The script is desi
 ### Example Usage:
 
 ```bash
-#Clone the repository:
-git clone https://github.com/yourusername/fabricmeans.git
 cd fabricmeans
 #Run the main script:
 matlab -r "run"
