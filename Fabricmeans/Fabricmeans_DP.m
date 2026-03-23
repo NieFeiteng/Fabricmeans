@@ -4,6 +4,7 @@ function [Y, minO, iter_num, sse, obj, balance_loss, elapsed_time] = Fabricmeans
 
 fprintf("Fabricmeans-DP\n");
 % parpool("local",numWorkers);
+epsilon = epsilon / max_iters
 clip_param = 0.5;
 delta_dp = 0.001;
 sigma = sqrt(2 * log(1.25/delta_dp)) * clip_param / epsilon;
