@@ -1,8 +1,9 @@
-# Federated and Balanced $k$-Means: Communication Efficiency, Privacy, and Heterogeneity
+# Federated $k$-means with Enhanced Balance and Privacy
 
 ## Overview
 
-Welcome to the official repository for **Fabricmeans**, a federated and balanced $k$-means clustering algorithm, along with its privacy-preserving extension **FabricmeansDP**. These algorithms are specifically designed to tackle the challenges of **communication efficiency** and **feature heterogeneity** in **Vertical Federated Learning (VFL)**.
+Welcome to the official repository for **Fabric**, a privacy-preserving federated and balanced $k$-means clustering algorithm for Vertical Federated Learning (VFL), and **Fabric-NoDP**, its non-private counterpart. Both methods are designed to address the core challenges of **communication efficiency** and **feature heterogeneity** in **Vertical Federated Learning (VFL)**.
+
 
 In addition to the core algorithms, this repository includes several comparative methods:
 
@@ -40,7 +41,7 @@ To run the algorithms, make sure to clone the repository and set up the necessar
 
 ## Fabricmeans Overview
 
-`Fabricmeans ` implements the **Federated and Balanced $k$-Means Clustering** algorithm, which is used to solve clustering problems in the context of **Vertical Federated Learning (VFL)** while maintaining communication efficiency and ensuring privacy. The function performs the following tasks:
+`Fabricmeans ` implements the **Federated $k$-means with Enhanced Balance and Privacy** algorithm, which is used to solve clustering problems in the context of **Vertical Federated Learning (VFL)** while maintaining communication efficiency and ensuring privacy. The function performs the following tasks:
 
 - Initializes cluster centers.
 - Iteratively updates the cluster assignments and centroids.
